@@ -25,7 +25,7 @@ router.get("/list",async (req,res)=>{
     {
         return res.status(404).send({error:"No tasks found!"});
     }
-    res.status(200).send(task);
+    res.status(200).send({Tasks:task});
     }catch(e){
         res.status(404).send({error:"Somethign went wrong"});
     }
